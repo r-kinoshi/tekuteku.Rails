@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    environment:
+      - AWS_S3_BUCKET_NAME: tekuteku
+      - AWS_S3_BUCKET_EXCLUDE: .*/*
+    docker:
+      - image: innovatorjapan/awscli:latest
+    steps:
+      - checkout
+      - run:
+          name: Deploy to S3 if branch is Master.
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              aws s3 sync ~/repo s3://${AWS_S3_BUCKET_NAME}/ --exact-timestamps --delete  --exclude "${AWS_S3_BUCKET_EXCLUDE}"
+            fi
