@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get   'posts/index'     #投稿
+  get   'posts/new'     #投稿
   get   'homes/index'     #ログイン
   get   'homes/login'     #ログイン
   root  'homes#index'     #ログイン
