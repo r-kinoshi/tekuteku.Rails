@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get   'posts/new'     #投稿
-  get   'homes/index'     #ログイン
+  resources :posts
+  get   'posts/show'
+  get   'homes/index'     #投稿一覧、トップページ
   get   'homes/login'     #ログイン
-  root  'homes#index'     #ログイン
+  root  'homes#index'     #投稿一覧、トップページ
   # devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
