@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :update]
+
   def index
     @posts = Post.all
   end
@@ -28,6 +30,10 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def set_post
+    @post = Post.find_by(id: params[:id])
+   end
 
   private
   def post_params
