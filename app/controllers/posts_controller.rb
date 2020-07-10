@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :update]
+
   def index
     @posts = Post.all
   end
@@ -17,17 +19,19 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by(id: params[:id])
   end
 
   def update
-    @post = Post.find_by(id: params[:id])
     if @post.update(post_params)
       redirect_to posts_url
     else
       render :edit
     end
   end
+
+  def set_post
+    @post = Post.find_by(id: params[:id])
+   end
 
   private
   def post_params
