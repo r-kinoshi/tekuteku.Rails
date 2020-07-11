@@ -1,3 +1,4 @@
+<img src="TAKE OUT2.png" style="width:100%;"></video>
 <% @posts.each do |post| %>
  <%= link_to post.title, post_path(post),  method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
 <% end %>
