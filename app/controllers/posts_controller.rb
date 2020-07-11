@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:edit, :update]
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -31,7 +31,12 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find_by(id: params[:id])
-   end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to posts_url
+  end
 
   private
   def post_params
