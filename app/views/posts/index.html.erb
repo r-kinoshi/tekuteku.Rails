@@ -4,7 +4,7 @@
   </div>
   <div class="posts__list">
     <% @posts.each do |post| %>
-      <%= link_to post.title, post_path(post),  method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %>
+      <%= link_to post.title, edit_post_path(post)%>
     <% end %>
   </div>
 </div>

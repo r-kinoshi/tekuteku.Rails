@@ -18,6 +18,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def set_post
+    @post = Post.find_by(id: params[:id])
+  end
+
   def edit
   end
 
@@ -27,10 +31,6 @@ class PostsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def set_post
-    @post = Post.find_by(id: params[:id])
   end
 
   def destroy

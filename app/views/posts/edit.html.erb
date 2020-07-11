@@ -1,4 +1,5 @@
 <%= form_with model: @post, local: true do |f| %>
- <%= f.text_field :title %>
+ <%= f.text_field :title%>
  <%= f.submit %>
 <% end %>
+<%= link_to '削除', post_path(@post),  method: :delete %>
