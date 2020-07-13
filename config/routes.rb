@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :restaurants
   get   'posts/show'
-  get   'homes/index'     #投稿一覧、トップページ
+  # get   'homes/index'     #投稿一覧、トップページ
   get   'homes/login'     #ログイン
   post  'posts/:id/edit' => 'posts#update'
   root  'restaurants#index'     #投稿一覧、トップページ

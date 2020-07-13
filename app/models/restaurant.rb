@@ -12,4 +12,5 @@
 #  user_id    :bigint           default(0), not null
 #
 class Restaurant < ApplicationRecord
+  belongs_to :user
 end
