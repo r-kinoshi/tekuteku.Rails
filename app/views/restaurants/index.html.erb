@@ -4,8 +4,7 @@
   </div>
   <div class="posts__list">
     <% @restaurants.each do |post| %>
-      <%= link_to post.comment, edit_restaurant_path(post)%>
+      <%= link_to post.url, edit_restaurant_path(post)%>
     <% end %>
   </div>
-  <%= link_to "新規作成","restaurants/new" %>
 </div>
