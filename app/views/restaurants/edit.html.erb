@@ -1,5 +1,20 @@
-<%= form_with model: @restaurant, local: true do |f| %>
- <%= f.text_field :name%>
- <%= f.submit %>
-<% end %>
-<%= link_to '削除', restaurant_path(@restaurant),  method: :delete %>
+<div class="edit-post">
+  <div class="edit-post__desc">
+    <%= form_with model: @restaurant, local: true do |f| %>
+    <div class="edit-post__desc--name">
+      <%= f.label :お店 %>
+      <%= f.text_field :name%>
+    </div>
+    <div class="edit-post__desc--comment">
+      <%= f.label :コメント %>
+      <%= f.text_field :comment%>
+    </div>
+    <div class="edit-post__desc--submit">
+      <%= f.submit %>
+    </div>
+    <% end %>
+    <div class="edit-post__desc--delete">
+      <%= link_to '投稿削除', restaurant_path(@restaurant),  method: :delete %>
+    </div>
+  </div>
+</div>
