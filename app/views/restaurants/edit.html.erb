@@ -1,0 +1,5 @@
+<%= form_with model: @restaurant, local: true do |f| %>
+ <%= f.text_field :name%>
+ <%= f.submit %>
+<% end %>
+<%= link_to '削除', restaurant_path(@restaurant),  method: :delete %>

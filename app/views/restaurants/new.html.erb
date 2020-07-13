@@ -1,0 +1,11 @@
+<%= form_with model: @restaurant, local: true  do |f| %>
+ <%= f.label :user_id %>
+ <%= f.text_field :user_id ,value: @user_id %>
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+ <%= f.label :コメント %>
+ <%= f.text_field :comment %>
+ <%= f.label :url %>
+ <%= f.text_field :url %>
+ <%= f.submit %>
+<% end %>
