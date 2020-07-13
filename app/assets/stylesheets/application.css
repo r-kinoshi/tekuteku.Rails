@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar {
+    position: fixed;
+    display:grid;
+    grid-template-columns: 100px 1fr;
+    font-weight: bold;
+    background-color: #fff;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+
+.navbar__left {
+    text-align: center;
+}
+
+.navbar__list {
+    display:grid;
+    justify-content: end;
+    grid-template-columns: 100px 100px 100px;
+}
+
+.navbar__list {
+    margin: 0;
+    padding: 0;
+}
+

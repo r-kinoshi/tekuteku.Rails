@@ -12,6 +12,7 @@ class RestaurantsController < ApplicationController
   
     def create
       @restaurant = Restaurant.new(post_params)
+      # @restaurant.user_id = current_user.id
       if @restaurant.save
         redirect_to restaurants_url
       else

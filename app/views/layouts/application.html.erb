@@ -11,6 +11,24 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <div class="navbar__left">
+        <%= link_to "tekuteku","/restaurants#index" %>
+      </div>
+      <div class="navbar__right">
+        <ul class="navbar__list">
+          <li class="navbar__item-home">
+            <%= link_to "ホーム","/restaurants#index" %>
+          </li>
+          <li class="navbar__item-login">
+            <%= link_to "ログイン", "/homes/login" %>
+          </li>
+          <li class="navbar__item-logout">
+            <%= link_to "投稿", "/restaurants/new" %>
+          </li>
+        </ul>
+      </div>
+    </div>
    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
