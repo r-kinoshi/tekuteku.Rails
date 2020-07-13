@@ -2,6 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
+// new
 .new-form_list {
+  margin-top: 200px;
+}
+
+//edit
+.edit-post {
+  width:100%;
+
+ %__desc {
+  font-size: 17px;
+  }
+
+  &__desc {
+    @extend %__desc;
     margin-top: 200px;
+    text-align: center;
+
+    &--name{
+      @extend %__desc;
+      margin-top: 20px;
+    }
+
+    &--comment{
+      @extend %__desc; 
+      margin-top: 20px;
+    }
+
+    &--submit{
+      @extend %__desc; 
+      margin-top: 20px;
+    }
+
+    &--delete{
+      @extend %__desc; 
+      margin-top: 20px;
+    }
+      &--delete a{
+      color: #BCBCBD;
+      }
+  }
 }
